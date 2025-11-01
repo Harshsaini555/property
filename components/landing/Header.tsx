@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -9,6 +9,23 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsMapOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +41,7 @@ const Header = () => {
         isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-auto py-auto flex items-center justify-between">
+      <div className="container mx-auto px-auto  flex items-center justify-between">
         <div className="flex items-center">
           <img src="/property_logo.png"  className="h-20 w-auto" />
         </div>
@@ -40,7 +57,7 @@ const Header = () => {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
           </Link>
           
-          <div className="relative">
+          <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsMapOpen(!isMapOpen)}
               className="text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-1 relative group"
@@ -55,14 +72,15 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg py-2 min-w-[150px]"
               >
-                <Link href="/noida-maps" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
-                  Noida Maps
-                </Link>
+                
                 <Link href="/greater-noida-maps" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   Greater Noida Maps
                 </Link>
                 <Link href="/yeida-maps" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                   Yeida Maps
+                </Link>
+                <Link href="/jaypee-sports-city" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                  Jaypee Sports City
                 </Link>
               </motion.div>
             )}
@@ -112,11 +130,9 @@ const Header = () => {
               </button>
               {isMapOpen && (
                 <div className="ml-4 mt-2 space-y-2">
-                  <Link href="/noida-maps" className="block text-gray-600 hover:text-blue-600">
-                    Noida Maps
-                  </Link>
+                  
                   <Link href="/greater-noida-maps" className="block text-gray-600 hover:text-blue-600">
-                    Yeida Maps
+                    Greater Noida Maps
                   </Link>
                   <Link href="/yeida-maps" className="block text-gray-600 hover:text-blue-600">
                     Yeida Maps

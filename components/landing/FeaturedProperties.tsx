@@ -63,8 +63,8 @@ const FeaturedProperties = () => {
         <div
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Properties</h2>
-          <p className="text-xl text-gray-600">Discover our premium property collection</p>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Featured Properties</h2>
+          <p className="text-[14px] md:text-[1rem] text-gray-600">Discover our premium property collection</p>
         </div>
 
         <div className="flex overflow-hidden">

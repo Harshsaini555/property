@@ -13,13 +13,7 @@ const TestimonialCard = ({ testimonial }: any) => {
       className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto"
     >
       <div className="flex flex-col md:flex-row items-center gap-8">
-        <div className="flex-shrink-0">
-          <img
-            src={testimonial.image}
-            alt={testimonial.name}
-            className="w-24 h-24 rounded-full object-cover"
-          />
-        </div>
+        
         
         <div className="flex-1 text-center md:text-left">
           <div className="flex justify-center md:justify-start mb-4">
@@ -52,7 +46,6 @@ const Testimonials = () => {
       location: "Noida Sector 62",
       rating: 5,
       review: "Exceptional service! They helped us find our dream home within our budget. The team was professional, responsive, and truly understood our needs.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
       id: 2,
@@ -60,7 +53,6 @@ const Testimonials = () => {
       location: "Greater Noida West",
       rating: 5,
       review: "Outstanding experience from start to finish. Their market knowledge and negotiation skills saved us both time and money. Highly recommended!",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
       id: 3,
@@ -68,7 +60,6 @@ const Testimonials = () => {
       location: "Yeida City",
       rating: 5,
       review: "Professional, reliable, and trustworthy. They made the entire property buying process smooth and stress-free. Thank you for the excellent service!",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
       id: 4,
@@ -76,7 +67,6 @@ const Testimonials = () => {
       location: "Noida Extension",
       rating: 5,
       review: "Amazing team with deep market insights. They guided us through every step and helped us make the right investment decision. Truly grateful!",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     }
   ];
 
@@ -96,19 +86,16 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+    <section className="py-20 bg-white ">
+      <div className="container mx-auto text-[14px] md:text-[1rem] px-4">
+        <div
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+          <p className=" text-gray-600 max-w-2xl mx-auto">
             Real experiences from real people who found their dream homes with us
           </p>
-        </motion.div>
+        </div>
 
         <div className="relative">
           <TestimonialCard testimonial={testimonials[currentIndex]} />

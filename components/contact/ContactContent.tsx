@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { MapPin, Phone, Mail, Clock, ChevronDown, Send } from "lucide-react";
+import { Button } from "../ui/stateful-button";
+import {ContactForm} from "@/components/landing/ContactFAQ";
 
 const ContactContent = () => {
   const [showForm, setShowForm] = useState(false);
@@ -43,8 +45,8 @@ const ContactContent = () => {
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-slate-900 mb-4">Get In Touch</h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <h1 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">Get In Touch</h1>
+          <p className="text-14px md:text-[1rem] text-slate-600 max-w-2xl mx-auto">
             Ready to find your dream property? Our expert team is here to help you every step of the way.
           </p>
         </div>
@@ -73,9 +75,9 @@ const ContactContent = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-8">Visit Our Office</h2>
+                <h2 className="text-xl md:text-3xl font-bold text-slate-900 mb-8">Visit Our Office</h2>
                 
-                <div className="space-y-6">
+                <div className="space-y-6 text-14px md:text-[1rem]">
                   {/* Address */}
                   <div className="flex items-start space-x-4">
                     <div className="bg-blue-100 p-3 rounded-lg">
@@ -83,7 +85,7 @@ const ContactContent = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-1">Address</h3>
-                      <p className="text-slate-600 leading-relaxed">
+                      <p className="text-slate-600 leading-relaxed ">
                         F-50 Suntwilight Commercial Complex,<br />
                         Near Delta Metro Station,<br />
                         Greater Noida, 201310
@@ -147,127 +149,10 @@ const ContactContent = () => {
           </div>
 
           {/* Contact Form - Slides Down */}
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${showForm ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
-              <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Schedule Your Consultation</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-all"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-all"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-all"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
-                    <select
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-all"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="buying">Property Buying</option>
-                      <option value="selling">Property Selling</option>
-                      <option value="renting">Property Renting</option>
-                      <option value="investment">Investment Consultation</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">Preferred Date</label>
-                    <input
-                      type="date"
-                      name="appointmentDate"
-                      value={formData.appointmentDate}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-all"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">Preferred Time</label>
-                    <select
-                      name="appointmentTime"
-                      value={formData.appointmentTime}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-all"
-                    >
-                      <option value="">Select time</option>
-                      <option value="9:00 AM">9:00 AM</option>
-                      <option value="10:00 AM">10:00 AM</option>
-                      <option value="11:00 AM">11:00 AM</option>
-                      <option value="12:00 PM">12:00 PM</option>
-                      <option value="2:00 PM">2:00 PM</option>
-                      <option value="3:00 PM">3:00 PM</option>
-                      <option value="4:00 PM">4:00 PM</option>
-                      <option value="5:00 PM">5:00 PM</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows={4}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-all resize-none"
-                    placeholder="Tell us about your property requirements..."
-                  />
-                </div>
-
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="inline-flex items-center space-x-2 bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl"
-                  >
-                    <Send className="w-5 h-5" />
-                    <span>Submit Appointment Request</span>
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div className={`overflow-hidden md:w-[40rem] transition-all duration-500 ease-in-out ${showForm ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+         
+              <ContactForm />
+          
           </div>
         </div>
       </section>

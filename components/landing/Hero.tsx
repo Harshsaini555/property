@@ -5,11 +5,11 @@ import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
-    <section id="home" className="bg-white px-8 py-4 pt-32">
+    <section id="home" className="bg-white px-8 py-16 sm:py-16 md:py-24 ">
       {/* Welcome Heading */}
       <div className="text-center mb-16">
-        <p className="text-4xl  text-gray-600 mb-2">Welcome to</p>
-        <h1 className="text-5xl font-sans md:text-6xl font-semibold text-gray-900">
+        <p className="text-2xl md:text-4xl  text-gray-600 mb-2">Welcome to</p>
+        <h1 className="text-4xl font-sans md:text-6xl font-semibold text-gray-900">
           Edition Realty<span className="text-orange-600">®</span>
         </h1>
       </div>
@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Left - Image */}
           <div>
             <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              src="/hero.jpeg"
               alt="Modern Building"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
             />

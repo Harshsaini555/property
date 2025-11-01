@@ -279,7 +279,7 @@ const ConstructionContent = () => {
             </h3>
           </div>
           
-          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 max-w-4xl mx-auto">
+          <div className="  p-8   max-w-4xl mx-auto">
             <ConstructionCalculator />
           </div>
         </div>

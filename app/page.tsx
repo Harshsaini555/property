@@ -6,7 +6,7 @@ import FeaturedProperties from "@/components/landing/FeaturedProperties";
 import Agents from "@/components/landing/Agents";
 import YouTube from "@/components/landing/YouTube";
 import Testimonials from "@/components/landing/Testimonials";
-import ContactFAQ from "@/components/landing/ContactFAQ";
+import {ContactFAQ} from "@/components/landing/ContactFAQ";
 import Footer from "@/components/landing/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import StickyBannerDemo from "../components/landing/sticky";

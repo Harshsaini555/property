@@ -1,7 +1,9 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import Link from "next/link";
 
 const VideoCard = ({ video, delay }: any) => {
   return (
@@ -40,24 +42,24 @@ const YouTube = () => {
   const videos = [
     {
       id: 1,
-      title: "Luxury Villa Tour - Noida Extension",
-      description: "Take a virtual tour of our premium villa project",
-      thumbnail: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      url: "https://youtube.com"
+      title: "Eta-1 Greater Noida Sector",
+      description: "Luxury Plots available for sale in near pari chowk",
+      thumbnail: "/yt-1.png",
+      url: "https://www.youtube.com/watch?v=LNMheB_eQfM"
     },
     {
       id: 2,
-      title: "Investment Opportunities 2024",
-      description: "Discover the best investment opportunities in real estate",
-      thumbnail: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      url: "https://youtube.com"
+      title: "Delta-2 Greater Noida",
+      description: "near pari chowk , greater noida authority",
+      thumbnail: "/yt-2.png",
+      url: "https://www.youtube.com/watch?v=RSDjaHk_iWs"
     },
     {
       id: 3,
-      title: "Client Success Stories",
-      description: "Hear from our satisfied clients about their experience",
-      thumbnail: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      url: "https://youtube.com"
+      title: "Swarn Nagri ",
+      description: "Greater Noida Luxury Plots available for sale",
+      thumbnail: "/yt-3.png",
+      url: "https://www.youtube.com/watch?v=JKz6sugmy8Q"
     }
   ];
 
@@ -70,8 +72,8 @@ const YouTube = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Watch Our Latest Videos</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Watch Our Latest Videos</h2>
+          <p className="text-[14px] md:text-[1rem] text-gray-600 max-w-2xl mx-auto">
             Get insights into our properties and success stories through our video content
           </p>
         </motion.div>
@@ -84,6 +86,12 @@ const YouTube = () => {
               delay={index * 0.2}
             />
           ))}
+        </div>
+        <div className="text-center pt-16">
+          <Link href={"https://youtube.com/@yamunaexpresswaydevelopment?si=IZq0lfjn4tugWtLT"}
+          target="_blank"
+          className="underline text-gray-500 hover:text-gray-900"
+          >more videos..</Link>
         </div>
       </div>
     </section>

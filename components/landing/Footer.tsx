@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-gray-900 text-white py-16 text-center md:text-left">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
@@ -34,9 +34,9 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="mb-6">
-                <img src="/logo.svg" alt="Luxury Real Estate Logo" className="h-12 w-auto mb-4" />
+                <h1 className="text-xl  mb-6">25 years of excellence in real estate. </h1>
                 <p className="text-gray-300">
-                  25 years of excellence in real estate. <br/><span>Your trusted real estate consultancy for buying, selling, renting, and investing in properties across Greater Noida, Yamuna Expressway, and Gurgaon.</span>
+                  Your trusted real estate consultancy for buying, selling, renting, and investing in properties across Greater Noida, Yamuna Expressway, and Gurgaon.
                 </p>
               </div>
             </motion.div>
@@ -59,32 +59,17 @@ const Footer = () => {
               <h3 className="text-xl font-semibold mb-6">We Provide</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    Residential properties
+                  <a href="/jaypee-sports-city" className="text-gray-300 hover:text-white transition-colors">
+                    Jaypee Sports City
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    Commercial Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    Industrial Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                    Institutional properties
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <a href="/greater-noida-maps" className="text-gray-300 hover:text-white transition-colors">
                     Greater Noida Projects
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <a href="/yeida-maps" className="text-gray-300 hover:text-white transition-colors">
                     Yeida Projects
                   </a>
                 </li>

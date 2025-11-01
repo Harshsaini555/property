@@ -24,26 +24,26 @@ const AboutContent = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Side Text */}
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900">Our Story</h2>
+              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed">
                 Edition Realty redefines real estate consultancy across Greater Noida, the Yamuna Expressway corridor, and Gurgaon. With over 25 years of undefeated success, we have established ourselves as the most trusted name in luxury real estate.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed">
                 Our expertise spans property sales, purchases, rentals, leases, and valuations — all backed by strategic investment guidance and seamless documentation. We believe in building dreams into reality through exceptional service and unwavering commitment to excellence.
               </p>
             </div>
 
             {/* Right Side Text */}
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <h2 className="text-xl md:text-3xl font-bold text-gray-900">Our Mission</h2>
+              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed">
                 To provide unparalleled real estate services that exceed client expectations while maintaining the highest standards of integrity, professionalism, and innovation in every transaction.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed">
                 We are committed to helping individuals and families find their perfect homes while ensuring investors make informed decisions that yield maximum returns. Our personalized approach ensures every client receives dedicated attention and expert guidance.
               </p>
               <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
-                <p className="text-blue-800 font-semibold italic">
+                <p className="text-blue-800 font-semibold italic text-[14px] md:text-[1rem] ">
                   "Your dream home is not just a destination, it's a journey we take together."
                 </p>
               </div>
@@ -61,10 +61,10 @@ const AboutContent = () => {
       {/* Contact Us Section */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4 lg:px-10 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
             Ready to Find Your Dream Property?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[1rem]  text-gray-600 mb-8 max-w-2xl mx-auto">
             Get in touch with our expert team today and let us help you make your real estate dreams a reality.
           </p>
           <a

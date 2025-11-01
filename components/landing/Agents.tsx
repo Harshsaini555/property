@@ -54,38 +54,38 @@ const Agents = () => {
    const agents = [
     {
       quote:
-        "15+ years of experience in luxury real estate with exceptional client satisfaction.",
+        "25+ years of experience in luxury real estate with exceptional client satisfaction.",
       name: "Mr. Ajesh",
       designation: "Head of Property Consultant",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/Ajesh.jpg",
     },
     {
       quote:
         "Expert in property investment strategies and market analysis for maximum returns",
       name: "Mr. Dinesh Khtana",
       designation: "Marketing Executive",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/Dinesh.jpeg",
     },
     {
       quote:
         "Specializes in high-end residential properties and personalized client service.",
       name: "Mr. Vaaren Kapasiya",
       designation: "Marketing Executive",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/Vaaren.jpeg",
     },
   ];
 
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Agents</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Agents</h2>
+          <p className="text-[14px] md:text-[1rem] text-gray-600 max-w-2xl mx-auto">
             Our experienced team of professionals is here to guide you through your real estate journey
           </p>
         </motion.div>
