@@ -57,7 +57,7 @@ const Agents = () => {
         "25+ years of experience in luxury real estate with exceptional client satisfaction.",
       name: "Mr. Ajesh",
       designation: "Head of Property Consultant",
-      src: "/Ajesh.jpg",
+      src: "/Ajesh.jpeg",
     },
     {
       quote:

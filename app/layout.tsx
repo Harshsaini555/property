@@ -15,9 +15,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Luxury Real Estate - 25 Years of Excellence",
+  title: "Editionrealty - Premium Real Estate Services",
   description: "Premium real estate services with 25 years of undefeated success. Find your dream home with trust and excellence.",
-  keywords: "luxury real estate, property dealing, dream homes, premium properties",
+  keywords: "real estate,editionrealty,properties,flats,plots, property dealing, homes, premium properties",
 };
 
 export default function RootLayout({

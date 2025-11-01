@@ -79,224 +79,224 @@ const cards = [
   {
     description: "Metallica",
     title: "Layout Plan of Sector 18(Part-4A)",
-    src: "/yeida-maps/10.jpgg",
+    src: "/yeida-maps/10.jpg",
     ctaText: "View",
     index:11
   },
   {
     description: "Lord Himesh",
     title: "Layout Plan of Sector 18(Part-5A)",
-    src: "/yeida-maps/11.jpgg",
+    src: "/yeida-maps/11.jpg",
     ctaText: "View",
     index:12
   },
   {
     description: "2031(Phase 1)",
     title: "Layout Plan of Sector 18(Part-5B)",
-    src: "/yeida-maps/12.jpgg",
+    src: "/yeida-maps/12.jpg",
     ctaText: "View",
     index:13
   },
   {
     description: "Babbu Maan",
     title: "Layout Plan of Sector 18(Part-5C)",
-    src: "/yeida-maps/13.jpgg",
+    src: "/yeida-maps/13.jpg",
     ctaText: "View",
     index:14
   },
   {
     description: "Metallica",
     title: "Layout Plan of Sector 18(Part-5D)",
-    src: "/yeida-maps/14.jpgg",
+    src: "/yeida-maps/14.jpg",
     ctaText: "View",
     index:15
   },
   {
     description: "Lord Himesh",
     title: "Layout Plan of Sector 18(Part-6A)",
-    src: "/yeida-maps/15.jpgg",
+    src: "/yeida-maps/15.jpg",
     ctaText: "View",
     index:16
   },
   {
     description: "2031(Phase 1)",
     title: "Layout Plan of Sector 18(Part-6B)",
-    src: "/yeida-maps/16.jpgg",
+    src: "/yeida-maps/16.jpg",
     ctaText: "View",
     index:17
   },
   {
     description: "Babbu Maan",
     title: "Layout Plan of Sector 18(Part-6C)",
-    src: "/yeida-maps/17.jpgg",
+    src: "/yeida-maps/17.jpg",
     ctaText: "View",
     index:18
   },
   {
     description: "Metallica",
     title: "Layout Plan of Sector 18(Part-6D)",
-    src: "/yeida-maps/18.jpgg",
+    src: "/yeida-maps/18.jpg",
     ctaText: "View",
     index:19
   },
   {
     description: "Lord Himesh",
     title: "Layout Plan of Sector 18(Part-7E)",
-    src: "/yeida-maps/19.jpgg",
+    src: "/yeida-maps/19.jpg",
     ctaText: "View",
     index:20
   },
   {
     description: "2031(Phase 1)",
     title: "Layout Plan of Sector 18(Part-7B & 7F)",
-    src: "/yeida-maps/20.jpgg",
+    src: "/yeida-maps/20.jpg",
     ctaText: "View",
     index:21
   },
   {
     description: "Babbu Maan",
     title: "Layout Plan of Sector 18(Part-7C & 7D)",
-    src: "/yeida-maps/21.jpgg",
+    src: "/yeida-maps/21.jpg",
     ctaText: "View",
     index:22
   },
   {
     description: "Metallica",
     title: "For Whom The Bell Tolls",
-    src: "/yeida-maps/22.jpgg",
+    src: "/yeida-maps/22.jpg",
     ctaText: "View",
     index:23
   },
   {
     description: "Lord Himesh",
     title: "Aap Ka Suroor",
-    src: "/yeida-maps/23.jpgg",
+    src: "/yeida-maps/23.jpg",
     ctaText: "View",
     index:24
   },
   {
     description: "2031(Phase 1)",
     title: "Layout Plan of Sector 20(Part-A)",
-    src: "/yeida-maps/24.jpgg",
+    src: "/yeida-maps/24.jpg",
     ctaText: "View",
     index:25
   },
   {
     description: "Babbu Maan",
     title: "Layout Plan of Sector 20(Part-B & C)",
-    src: "/yeida-maps/25.jpgg",
+    src: "/yeida-maps/25.jpg",
     ctaText: "View",
     index:26
   },
   {
     description: "Metallica",
     title: "Layout Plan of Sector 20(Part-B & C) -2",
-    src: "/yeida-maps/26.jpgg",
+    src: "/yeida-maps/26.jpg",
     ctaText: "View",
     index:27
   },
   {
     description: "Lord Himesh",
     title: "Layout Plan of Sector 20(Part-D)",
-    src: "/yeida-maps/27.jpgg",
+    src: "/yeida-maps/27.jpg",
     ctaText: "View",
     index:28
   },
   {
     description: "2031(Phase 1)",
     title: "Layout Plan of Sector 20(Part-E)",
-    src: "/yeida-maps/28.jpgg",
+    src: "/yeida-maps/28.jpg",
     ctaText: "View",
     index:29
   },
   {
     description: "Babbu Maan",
     title: "Layout Plan of Sector 20(Part-F)",
-    src: "/yeida-maps/29.jpgg",
+    src: "/yeida-maps/29.jpg",
     ctaText: "View",
     index:30
   },
   {
     description: "Metallica",
     title: "Layout Plan of Sector 20(Part-G)",
-    src: "/yeida-maps/30.jpgg",
+    src: "/yeida-maps/30.jpg",
     ctaText: "View",
     index:31
   },
   {
     description: "Lord Himesh",
     title: "Layout Plan of Sector 20(Part-H)",
-    src: "/yeida-maps/31.jpgg",
+    src: "/yeida-maps/31.jpg",
     ctaText: "View",
     index:32
   },
   {
     description: "2031(Phase 1)",
     title: "Layout Plan of Sector 20(Part-K & L)",
-    src: "/yeida-maps/32.jpgg",
+    src: "/yeida-maps/32.jpg",
     ctaText: "View",
     index:33
   },
   {
     description: "Babbu Maan",
     title: "Layout Plan of Sector 20(Part-M)",
-    src: "/yeida-maps/33.jpgg",
+    src: "/yeida-maps/33.jpg",
     ctaText: "View",
     index:34
   },
   {
     description: "Metallica",
     title: "Layout Plan of Sector 20(Part-N)",
-    src: "/yeida-maps/34.jpgg",
+    src: "/yeida-maps/34.jpg",
     ctaText: "View",
     index:35
   },
   {
     description: "Lord Himesh",
     title: "Layout Plan of Sector 20(Part-T)",
-    src: "/yeida-maps/35.jpgg",
+    src: "/yeida-maps/35.jpg",
     ctaText: "View",
     index:36
   },
   {
     description: "2031(Phase 1)",
     title: "Layout Plan of Sector 20(Part-P)",
-    src: "/yeida-maps/36.jpgg",
+    src: "/yeida-maps/36.jpg",
     ctaText: "View",
     index:37
   },
   {
     description: "Babbu Maan",
     title: "Layout Plan of Sector 20(Part-Q)",
-    src: "/yeida-maps/37.jpgg",
+    src: "/yeida-maps/37.jpg",
     ctaText: "View",
     index:38
   },
   {
     description: "Metallica",
     title: "Layout Plan of Sector 20(Part-R & S)",
-    src: "/yeida-maps/38.jpgg",
+    src: "/yeida-maps/38.jpg",
     ctaText: "View",
     index:39
   },
   {
     description: "Lord Himesh",
     title: "Layout Plan of Sector 20(Part-O)",
-    src: "/yeida-maps/39.jpgg",
+    src: "/yeida-maps/39.jpg",
     ctaText: "View",
     index:40
   },
   {
     description: "Metallica",
     title: "Layout Plan of Sector 20(Part-U)",
-    src: "/yeida-maps/40.jpgg",
+    src: "/yeida-maps/40.jpg",
     ctaText: "View",
     index:41
   },
   {
     description: "Lord Himesh",
     title: "Layout Plan of Sector -22D",
-    src: "/yeida-maps/41.jpgg",
+    src: "/yeida-maps/41.jpg",
     ctaText: "View",
     index:42
   },

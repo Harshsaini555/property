@@ -93,8 +93,8 @@ const MapsContent: React.FC<MapsContentProps> = ({ cards = [], heading }) => {
               onClick={() => setSelectedMap(null)}
             />
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-              <div className="bg-white rounded-lg shadow-xl max-w-5xl w-full max-h-[90vh] overflow-auto">
-                <div className="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between z-10">
+              <div className="bg-white rounded-lg shadow-xl max-w-5xl w-full max-h-[60vh] md:max-h-[90vh] overflow-auto">
+                <div className="sticky top-0 bg-white border-b px-6 py-2 md:py-4 flex items-center justify-between z-10">
                   <h2 className="text-xl font-semibold text-gray-900">
                     {selectedMap.title || selectedMap.name || `Map ${selectedMap.index}`}
                   </h2>
@@ -115,7 +115,7 @@ const MapsContent: React.FC<MapsContentProps> = ({ cards = [], heading }) => {
                     </button>
                     <button
                       onClick={() => setIsImageZoomed(true)}
-                      className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                      className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
                       title="Full Size"
                     >
                       <Maximize2 className="w-5 h-5 text-gray-600" />
