@@ -7,6 +7,7 @@ import Link from "next/link";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import StickyBannerDemo from "@/components/landing/sticky";
+import { Suspense } from "react";
 
 const agentsData = {
   ajesh: {
@@ -61,7 +62,7 @@ social media and creating targeted campaigns that resonate with potential buyers
   }
 };
 
-export default function AgentsInfo() {
+function AgentContent() {
   const searchParams = useSearchParams();
   const agentId = searchParams.get("agent") || "ajesh";
   const agent = agentsData[agentId as keyof typeof agentsData];
@@ -71,73 +72,81 @@ export default function AgentsInfo() {
   }
 
   return (
-    <>
-      <StickyBannerDemo />
-      <Header />
-      <div className="min-h-screen bg-white py-12 mt-12">
-        <div className="w-screen h-[10rem] bg-[#0F828C] flex   justify-center "> 
-          <h1 className="my-auto mx-auto text-4xl md:text-6xl text-bold text-white">{agent.name}</h1>
-        </div>
-        <div className="container mx-auto px-4 max-w-5xl">
-          
+    <div className="min-h-screen bg-white py-12 mt-12">
+      <div className="w-screen h-[10rem] bg-[#0F828C] flex   justify-center "> 
+        <h1 className="my-auto mx-auto text-4xl md:text-6xl text-bold text-white">{agent.name}</h1>
+      </div>
+      <div className="container mx-auto px-4 max-w-5xl">
         
-        <motion.div
-          className="bg-whte rounded-2xl  overflow-hidden"
-        >
-          <div className="md:flex">
-            <div className="md:w-1/3 p-8">
-              <img
-                src={agent.image}
-                alt={agent.name}
-                className="w-full h-80 object-cover rounded-xl"
-              />
-            </div>
+      
+      <motion.div
+        className="bg-whte rounded-2xl  overflow-hidden"
+      >
+        <div className="md:flex">
+          <div className="md:w-1/3 p-8">
+            <img
+              src={agent.image}
+              alt={agent.name}
+              className="w-full h-80 object-cover rounded-xl"
+            />
+          </div>
+          
+          <div className="md:w-2/3 p-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">{agent.name}</h1>
             
-            <div className="md:w-2/3 p-8">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">{agent.name}</h1>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 py-9">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-gray-600" />
-                  <a href={`mailto:${agent.email}`} className="text-gray-700 hover:text-blue-600">
-                    {agent.email}
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-gray-600" />
-                  <a href={`tel:${agent.phone}`} className="text-gray-700 hover:text-blue-600">
-                    {agent.phone}
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <User className="w-5 h-5 text-gray-600" />
-                  <a  target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
-                    {agent.designation}
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MessageCircle className="w-5 h-5 text-gray-600" />
-                  <a href={agent.whatsapp} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
-                    WhatsApp
-                  </a>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 py-9">
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-gray-600" />
+                <a href={`mailto:${agent.email}`} className="text-gray-700 hover:text-blue-600">
+                  {agent.email}
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-gray-600" />
+                <a href={`tel:${agent.phone}`} className="text-gray-700 hover:text-blue-600">
+                  {agent.phone}
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <User className="w-5 h-5 text-gray-600" />
+                <a  target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
+                  {agent.designation}
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <MessageCircle className="w-5 h-5 text-gray-600" />
+                <a href={agent.whatsapp} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600">
+                  WhatsApp
+                </a>
               </div>
             </div>
           </div>
-          
-          <div className="px-8 pb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">About {agent.name}</h2>
-            <div className="prose prose-gray max-w-none">
-              {agent.description.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-700 mb-4 leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </div>
-        </motion.div>
         </div>
+        
+        <div className="px-8 pb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About {agent.name}</h2>
+          <div className="prose prose-gray max-w-none">
+            {agent.description.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-gray-700 mb-4 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </motion.div>
       </div>
+    </div>
+  );
+}
+
+export default function AgentsInfo() {
+  return (
+    <>
+      <StickyBannerDemo />
+      <Header />
+      <Suspense fallback={<div>Loading...</div>}>
+        <AgentContent />
+      </Suspense>
       <Footer />
     </>
   );
