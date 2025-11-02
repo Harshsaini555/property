@@ -8,9 +8,9 @@ const Hero = () => {
     <section id="home" className="bg-white px-8 py-16 sm:py-16 md:py-24 ">
       {/* Welcome Heading */}
       <div className="text-center mb-16">
-        <p className="text-2xl md:text-4xl  text-gray-600 mb-2">Welcome to</p>
-        <h1 className="text-4xl font-sans md:text-6xl font-semibold text-gray-900">
-          Edition Realty<span className="text-orange-600">®</span>
+        <p className="text-2xl md:text-4xl text-gray-600 mb-2" style={{fontFamily: 'Caveat, cursive'}}>Welcome to</p>
+        <h1 className="text-4xl md:text-6xl  text-gray-900" style={{fontFamily: 'Caveat, cursive'}}>
+          Edition Realty
         </h1>
       </div>
 

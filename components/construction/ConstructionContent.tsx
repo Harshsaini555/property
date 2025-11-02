@@ -77,7 +77,7 @@ const ConstructionCalculator = () => {
         <div className="flex items-end">
           <button
             onClick={calculateValues}
-            className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all"
+            className="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all"
           >
             Calculate
           </button>
@@ -146,30 +146,30 @@ const ConstructionContent = () => {
             </div>
 
             {/* Right Side - Content */}
-            <div className="space-y-6">
+            <div className="space-y-6" style={{fontFamily: 'Caveat, cursive'}}>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Building Dreams into{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
+                <span className="text-transparent bg-clip-text bg-red-500">
                   Reality
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-gray-600 leading-relaxed" style={{fontFamily: 'Caveat, cursive'}}>
                 Trusted Construction Experts for 25+ Years
               </p>
-              <p className="text-lg text-gray-500 leading-relaxed">
+              <p className="text-lg text-gray-500 leading-relaxed" style={{fontFamily: 'Caveat, cursive'}}>
                 Edition Realty redefines real estate consultancy across Greater Noida, the Yamuna Expressway corridor, and Gurgaon. Our expertise spans property sales, purchases, rentals, leases, and valuations — all backed by strategic investment guidance and seamless documentation.
              </p>
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-amber-600">25+</div>
+                  <div className="text-3xl font-bold text-red-500">25+</div>
                   <div className="text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-amber-600">500+</div>
+                  <div className="text-3xl font-bold text-red-500">500+</div>
                   <div className="text-gray-600">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-amber-600">100%</div>
+                  <div className="text-3xl font-bold text-red-500">100%</div>
                   <div className="text-gray-600">Client Satisfaction</div>
                 </div>
               </div>

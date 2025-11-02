@@ -27,7 +27,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-auto  flex items-center justify-between">
         <div className="flex items-center">
-          <img src="/property_logo.png"  className="h-20 w-auto" />
+          <img src="/property_logo.png"  className="h-28 w-auto" />
         </div>
         
         {/* Desktop Navigation */}

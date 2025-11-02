@@ -26,7 +26,7 @@ const CounterCard = ({ icon: Icon, number, label, delay }: any) => {
 
   return (
     <div
-      className="bg-white rounded-2xl p-4  transition-all text-center group hover:scale-105"
+      className="bg-[#F9FAFB] rounded-2xl py-4 w-[18rem] mx-auto transition-all text-center  group hover:scale-105"
     >
       <h3 className="text-3xl font-bold text-gray-900 mb-2">
         {Math.floor(count).toLocaleString()}+

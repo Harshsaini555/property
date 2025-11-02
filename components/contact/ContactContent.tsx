@@ -80,7 +80,7 @@ const ContactContent = () => {
                 <div className="space-y-6 text-14px md:text-[1rem]">
                   {/* Address */}
                   <div className="flex items-start space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-lg">
+                    <div className=" p-3 rounded-lg">
                       <MapPin className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
@@ -95,7 +95,7 @@ const ContactContent = () => {
 
                   {/* Phone */}
                   <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
+                    <div className=" p-3 rounded-lg">
                       <Phone className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
@@ -106,7 +106,7 @@ const ContactContent = () => {
 
                   {/* Email */}
                   <div className="flex items-start space-x-4">
-                    <div className="bg-orange-100 p-3 rounded-lg">
+                    <div className=" p-3 rounded-lg">
                       <Mail className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
@@ -117,7 +117,7 @@ const ContactContent = () => {
 
                   {/* Hours */}
                   <div className="flex items-start space-x-4">
-                    <div className="bg-purple-100 p-3 rounded-lg">
+                    <div className=" p-3 rounded-lg">
                       <Clock className="w-6 h-6 text-purple-600" />
                     </div>
                     <div>

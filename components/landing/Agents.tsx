@@ -1,83 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, MessageCircle, Mail } from "lucide-react";
-import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import Link from "next/link";
 
 const AgentCard = ({ agent, delay }: any) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      whileHover={{ y: -10 }}
-      className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all text-center group"
+    <div
+      className="bg-white flex flex-col  transition-all group overflow-hidden"
     >
-      <div className="relative mb-6">
+      <div className="relative h-64 w-full p-6">
         <img
           src={agent.image}
           alt={agent.name}
-          className="w-24 h-24 rounded-full mx-auto object-cover group-hover:scale-110 transition-transform"
+          className="md:h-[20rem] h-[16rem] w-full rounded-3xl object-cover object-center "
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-full"></div>
       </div>
       
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{agent.name}</h3>
-      <p className="text-blue-600 font-medium mb-4">{agent.title}</p>
-      <p className="text-gray-600 mb-6">{agent.description}</p>
-      
-      <div className="flex justify-center space-x-4">
-        <a
-          href={agent.linkedin}
-          className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+      <div className="pt-10 md:mt-20  text-center">
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">{agent.name}</h3>
+        <p className="text-blue-600 font-medium mb-6">{agent.designation}</p>
+        
+        <Link
+          href={`/about/agents-info?agent=${agent.id}`}
+          className="inline-block bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
         >
-          <Linkedin className="w-5 h-5" />
-        </a>
-        <a
-          href={agent.whatsapp}
-          className="bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition-colors"
-        >
-          <MessageCircle className="w-5 h-5" />
-        </a>
-        <a
-          href={agent.email}
-          className="bg-gray-600 text-white p-2 rounded-full hover:bg-gray-700 transition-colors"
-        >
-          <Mail className="w-5 h-5" />
-        </a>
+          Know More
+        </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Agents = () => {
-   const agents = [
+  const agents = [
     {
-      quote:
-        "25+ years of experience in luxury real estate with exceptional client satisfaction.",
+      id: "ajesh",
       name: "Mr. Ajesh",
       designation: "Head of Property Consultant",
-      src: "/Ajesh.jpeg",
+      image: "/Ajesh.jpeg",
     },
     {
-      quote:
-        "Expert in property investment strategies and market analysis for maximum returns",
+      id: "dinesh",
       name: "Mr. Dinesh Khtana",
       designation: "Marketing Executive",
-      src: "/Dinesh.jpeg",
+      image: "/Dinesh.jpeg",
     },
     {
-      quote:
-        "Specializes in high-end residential properties and personalized client service.",
+      id: "vaaren",
       name: "Mr. Vaaren Kapasiya",
       designation: "Marketing Executive",
-      src: "/Vaaren.jpeg",
+      image: "/Vaaren.jpeg",
     },
   ];
 
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 ">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +68,11 @@ const Agents = () => {
           </p>
         </motion.div>
         
-        <AnimatedTestimonials testimonials={agents} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {agents.map((agent, index) => (
+            <AgentCard key={agent.id} agent={agent} delay={index * 0.2} />
+          ))}
+        </div>
       </div>
     </section>
   );

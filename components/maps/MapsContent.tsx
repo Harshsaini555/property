@@ -34,14 +34,28 @@ const MapsContent: React.FC<MapsContentProps> = ({ cards = [], heading }) => {
   );
 
   return (
-    <div className="pt-32">
+    <div className="py-12 mt-10">
       {/* Simple Header */}
       <section className=" bg-white border-b">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">{heading}</h1>
-            <p className="text-gray-600 text-lg">Browse available property location maps</p>
-          </div>
+        <div className="relative w-screen h-[16rem] flex justify-center items-center overflow-hidden">
+          {/* Blurred background image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center blur-sm"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')",
+            }}
+          ></div>
+
+
+          {/* Text stays crisp and visible */}
+          <h1 className="relative text-4xl md:text-6xl font-semibold text-white z-10">
+            {heading}
+          </h1>
+        </div>
+
+        <div className="container mx-auto  px-4 py-4">
+          
           
           <div className="max-w-md mx-auto pb-4">
             <div className="relative">
