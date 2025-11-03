@@ -74,7 +74,7 @@ function AgentContent() {
   return (
     <div className="min-h-screen bg-white py-12 mt-12">
       <div className="w-screen h-[10rem] bg-[#0F828C] flex   justify-center "> 
-        <h1 className="my-auto mx-auto text-4xl md:text-6xl text-bold text-white">{agent.name}</h1>
+        <h1 className="my-auto mx-auto text-4xl md:text-6xl text-bold text-white" style={{fontFamily: 'Caveat'}}>{agent.name}</h1>
       </div>
       <div className="container mx-auto px-4 max-w-5xl">
         

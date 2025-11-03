@@ -12,7 +12,7 @@ const AboutContent = () => {
       }}>
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
         <div className="relative z-10 flex items-center justify-center h-full">
-          <h1 className="text-6xl md:text-8xl font-bold text-white text-center">
+          <h1 className="text-6xl md:text-8xl font-bold text-white text-center" style={{fontFamily: 'Caveat'}}>
             About Us
           </h1>
         </div>
@@ -25,10 +25,10 @@ const AboutContent = () => {
             {/* Left Side Text */}
             <div className="space-y-6">
               <h2 className="text-xl md:text-3xl font-bold text-gray-900">Our Story</h2>
-              <p className="text-[14px] md:text-[1rem]   text-gray-600 leading-relaxed" style={{fontFamily: 'Caveat, cursive'}}>
+              <p className="text-[14px] md:text-[1rem]   text-gray-600 leading-relaxed" >
                 Edition Realty redefines real estate consultancy across Greater Noida, the Yamuna Expressway corridor, and Gurgaon. With over 25 years of undefeated success, we have established ourselves as the most trusted name in luxury real estate.
               </p>
-              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed" style={{fontFamily: 'Caveat, cursive'}}>
+              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed" >
                 Our expertise spans property sales, purchases, rentals, leases, and valuations — all backed by strategic investment guidance and seamless documentation. We believe in building dreams into reality through exceptional service and unwavering commitment to excellence.
               </p>
             </div>
@@ -36,14 +36,14 @@ const AboutContent = () => {
             {/* Right Side Text */}
             <div className="space-y-6">
               <h2 className="text-xl md:text-3xl font-bold text-gray-900">Our Mission</h2>
-              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed" style={{fontFamily: 'Caveat, cursive'}}>
+              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed" >
                 To provide unparalleled real estate services that exceed client expectations while maintaining the highest standards of integrity, professionalism, and innovation in every transaction.
               </p>
-              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed" style={{fontFamily: 'Caveat, cursive'}}>
+              <p className="text-[14px] md:text-[1rem]  text-gray-600 leading-relaxed" >
                 We are committed to helping individuals and families find their perfect homes while ensuring investors make informed decisions that yield maximum returns. Our personalized approach ensures every client receives dedicated attention and expert guidance.
               </p>
               <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
-                <p className="text-blue-800 font-semibold italic text-[14px] md:text-[1rem] " style={{fontFamily: 'Caveat, cursive'}}>
+                <p className="text-blue-800 font-semibold italic text-[14px] md:text-[1rem] " >
                   "Your dream home is not just a destination, it's a journey we take together."
                 </p>
               </div>

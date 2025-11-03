@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, MapPin, X, ZoomIn, ZoomOut, Maximize2 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 interface MapData {
@@ -18,10 +18,17 @@ type MapsContentProps = {
 };
 
 const MapsContent: React.FC<MapsContentProps> = ({ cards = [], heading }) => {
+
+const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [selectedMap, setSelectedMap] = useState<MapData | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [isImageZoomed, setIsImageZoomed] = useState(false);
   const [imageScale, setImageScale] = useState(1);
+
+  useEffect(() => {
+    if (selectedMap) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
+  }, [selectedMap]);
 
   const filteredMaps = cards.filter(
     (map) => {
@@ -49,7 +56,7 @@ const MapsContent: React.FC<MapsContentProps> = ({ cards = [], heading }) => {
 
 
           {/* Text stays crisp and visible */}
-          <h1 className="relative text-4xl md:text-6xl font-semibold text-white z-10">
+          <h1 className="relative text-4xl md:text-6xl font-semibold text-white z-10" style={{fontFamily: 'Caveat'}}>
             {heading}
           </h1>
         </div>
@@ -97,88 +104,162 @@ const MapsContent: React.FC<MapsContentProps> = ({ cards = [], heading }) => {
 
       {/* Map Modal */}
       <AnimatePresence>
-        {selectedMap && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
-              onClick={() => setSelectedMap(null)}
-            />
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-              <div className="bg-white rounded-lg shadow-xl max-w-5xl w-full max-h-[60vh] md:max-h-[90vh] overflow-auto">
-                <div className="sticky top-0 bg-white border-b px-6 py-2 md:py-4 flex items-center justify-between z-10">
-                  <h2 className="text-xl font-semibold text-gray-900">
-                    {selectedMap.title || selectedMap.name || `Map ${selectedMap.index}`}
-                  </h2>
-                  <div className="flex items-center space-x-2">
-                    <button
-                      onClick={() => setImageScale(prev => Math.min(prev + 0.25, 3))}
-                      className="p-2 hover:bg-gray-100 rounded-lg transition-colors" 
-                      title="Zoom In"
-                    >
-                      <ZoomIn className="w-5 h-5 text-gray-600" />
-                    </button>
-                    <button
-                      onClick={() => setImageScale(prev => Math.max(prev - 0.25, 0.5))}
-                      className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                      title="Zoom Out"
-                    >
-                      <ZoomOut className="w-5 h-5 text-gray-600" />
-                    </button>
-                    <button
-                      onClick={() => setIsImageZoomed(true)}
-                      className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                      title="Full Size"
-                    >
-                      <Maximize2 className="w-5 h-5 text-gray-600" />
-                    </button>
-                    <button
-                      onClick={() => setSelectedMap(null)}
-                      className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                      title="Close"
-                    >
-                      <X className="w-5 h-5 text-gray-600" />
-                    </button>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="bg-gray-100 rounded-lg overflow-auto mb-6 relative group max-h-[70vh]">
-                    <div className="flex items-center justify-center min-h-[400px]">
-                      <Image
-                        width={800}
-                        height={600}
-                        alt={selectedMap.name || "Map image"}
-                        src={selectedMap.src}
-                        className="object-contain cursor-pointer transition-transform duration-200"  
-                        style={{ transform: `scale(${imageScale})` }}
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-row-reverse">
-                    <button 
-                      onClick={() => {
-                        const link = document.createElement('a');
-                        link.href = selectedMap.src;
-                        link.download = `${selectedMap.name || selectedMap.title || 'map'}.jpg`;
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                      }}
-                      className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      Download
-                    </button>
-                  </div>
-                </div>
-              </div>
+  {selectedMap && (
+    <>
+      {/* Background overlay */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+        onClick={() => setSelectedMap(null)}
+      />
+
+      {/* Map modal */}
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 ">
+        <div className="bg-white rounded-lg shadow-xl max-w-5xl w-full max-h-[60vh] md:max-h-[90vh] overflow-auto">
+          
+          {/* Header */}
+          <div className="sticky top-0 bg-white border-b px-6 py-3 flex items-center justify-between z-10">
+            <h2 className="md:text-xl text-[0.9rem] font-semibold text-gray-900">
+              {selectedMap.title || selectedMap.name || `Map ${selectedMap.index}`}
+            </h2>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => setImageScale(prev => Math.min(prev + 0.25, 3))}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                title="Zoom In"
+              >
+                <ZoomIn className="w-5 h-5 text-gray-600" />
+              </button>
+              <button
+                onClick={() => setImageScale(prev => Math.max(prev - 0.25, 0.5))}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                title="Zoom Out"
+              >
+                <ZoomOut className="w-5 h-5 text-gray-600" />
+              </button>
+              <button
+                onClick={() => setSelectedMap(null)}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                title="Close"
+              >
+                <X className="w-5 h-5 text-gray-600" />
+              </button>
             </div>
-          </>
-        )}
-      </AnimatePresence>
+          </div>
+
+          {/* Map Container */}
+          <div
+            className="relative flex items-center justify-center bg-gray-100 overflow-hidden touch-none md:h-[70vh] h-[45vh]"
+          >
+            <div
+              className="cursor-grab active:cursor-grabbing transition-transform duration-150 ease-out"
+              style={{
+                transform: `translate(${offset.x}px, ${offset.y}px) scale(${imageScale})`,
+                transformOrigin: "center center",
+              }}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                const startX = e.clientX - offset.x;
+                const startY = e.clientY - offset.y;
+
+                const handleMouseMove = (e: MouseEvent) => {
+                  setOffset({ x: e.clientX - startX, y: e.clientY - startY });
+                };
+
+                const handleMouseUp = () => {
+                  window.removeEventListener("mousemove", handleMouseMove);
+                  window.removeEventListener("mouseup", handleMouseUp);
+                };
+
+                window.addEventListener("mousemove", handleMouseMove);
+                window.addEventListener("mouseup", handleMouseUp);
+              }}
+              onTouchStart={(e) => {
+                if (e.touches.length === 1) {
+                  // Single finger drag
+                  const startX = e.touches[0].clientX - offset.x;
+                  const startY = e.touches[0].clientY - offset.y;
+
+                  const handleTouchMove = (e: TouchEvent) => {
+                    if (e.touches.length === 1) {
+                      setOffset({
+                        x: e.touches[0].clientX - startX,
+                        y: e.touches[0].clientY - startY,
+                      });
+                    }
+                  };
+
+                  const handleTouchEnd = () => {
+                    window.removeEventListener("touchmove", handleTouchMove);
+                    window.removeEventListener("touchend", handleTouchEnd);
+                  };
+
+                  window.addEventListener("touchmove", handleTouchMove);
+                  window.addEventListener("touchend", handleTouchEnd);
+                } else if (e.touches.length === 2) {
+                  // Pinch zoom
+                  const dist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                  );
+                  let initialDist = dist;
+                  const handlePinch = (e: TouchEvent) => {
+                    if (e.touches.length === 2) {
+                      const newDist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                      );
+                      const zoomFactor = newDist / initialDist;
+                      setImageScale((prev) =>
+                        Math.min(Math.max(prev * zoomFactor, 0.5), 3)
+                      );
+                      initialDist = newDist;
+                    }
+                  };
+
+                  const handlePinchEnd = () => {
+                    window.removeEventListener("touchmove", handlePinch);
+                    window.removeEventListener("touchend", handlePinchEnd);
+                  };
+
+                  window.addEventListener("touchmove", handlePinch);
+                  window.addEventListener("touchend", handlePinchEnd);
+                }
+              }}
+            >
+              <Image
+                width={800}
+                height={600}
+                src={selectedMap.src}
+                alt={selectedMap.name || "Map"}
+                className="object-contain select-none"
+                draggable={false}
+              />
+            </div>
+          </div>
+
+          {/* Footer buttons */}
+          <div className="p-4 border-t flex justify-end">
+            <button
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = selectedMap.src;
+                link.download = `${selectedMap.name || selectedMap.title || "map"}.jpg`;
+                link.click();
+              }}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  )}
+</AnimatePresence>
+
 
       {/* Full Size Image Modal */}
       <AnimatePresence>

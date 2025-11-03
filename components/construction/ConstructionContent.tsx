@@ -140,23 +140,23 @@ const ConstructionContent = () => {
               <img
                 src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Construction Site"
-                className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl border-4 border-amber-100"
+                className="w-full h-96 lg:h-[500px] object-cover rounded-2xl  "
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
 
             {/* Right Side - Content */}
-            <div className="space-y-6" style={{fontFamily: 'Caveat, cursive'}}>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <div className="space-y-6" >
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight" style={{fontFamily: 'Caveat'}}>
                 Building Dreams into{" "}
                 <span className="text-transparent bg-clip-text bg-red-500">
                   Reality
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed" style={{fontFamily: 'Caveat, cursive'}}>
+              <p className="text-xl text-gray-600 leading-relaxed" >
                 Trusted Construction Experts for 25+ Years
               </p>
-              <p className="text-lg text-gray-500 leading-relaxed" style={{fontFamily: 'Caveat, cursive'}}>
+              <p className="text-lg text-gray-500 leading-relaxed" >
                 Edition Realty redefines real estate consultancy across Greater Noida, the Yamuna Expressway corridor, and Gurgaon. Our expertise spans property sales, purchases, rentals, leases, and valuations — all backed by strategic investment guidance and seamless documentation.
              </p>
               <div className="flex items-center space-x-8 pt-4">
