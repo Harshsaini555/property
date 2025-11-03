@@ -29,13 +29,13 @@ As the Head of Property Consultant at Edition Realty, Mr. Ajesh leads a team of 
 `
   },
   dinesh: {
-    name: "Mr. Dinesh Khtana",
+    name: "Mr. Dinesh Khatana",
     designation: "Marketing Executive",
     image: "/Dinesh.jpeg",
     email: "Dinesheditionrealty@gmail.com",
-    phone: "+91 6396500826",
+    phone: "+91 9718181966",
     linkedin: "https://linkedin.com/in/dinesh-khtana",
-    whatsapp: "https://wa.me/916396500826",
+    whatsapp: "https://wa.me/919718181966",
     description: `Client-focused Real Estate Agent with 8+ years of experience helping clients find their perfect home by carefully researching market trends, property values and neighborhoods. Real Estate Agen Conduct open houses to help market for-sale properties Stay up-to-date on market trends and property values to best assist clients Develop positive and trusting relationships with customers by
 
 

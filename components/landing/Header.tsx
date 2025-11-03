@@ -100,10 +100,10 @@ const Header = () => {
           className="md:hidden bg-white border-t border-gray-200"
         >
           <div className="container mx-auto px-4 py-4 space-y-4">
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="block text-gray-800 hover:text-blue-600 transition-colors">
+            <Link href="/"  className="block text-gray-800 hover:text-blue-600 transition-colors">
               Home
             </Link>
-            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block text-gray-800 hover:text-blue-600 transition-colors">
+            <Link href="/about"  className="block text-gray-800 hover:text-blue-600 transition-colors">
               About
             </Link>
             <div>
@@ -118,21 +118,21 @@ const Header = () => {
                 <div className="ml-4 mt-2 space-y-2">
                   <Link 
                     href="/greater-noida-maps" 
-                    onClick={() => {setIsMobileMenuOpen(false); setIsMapOpen(false);}} 
+                    onClick={() => { setIsMapOpen(false);}} 
                     className="block text-gray-600 hover:text-blue-600 py-3 px-2 cursor-pointer touch-manipulation"
                   >
                     Greater Noida Maps
                   </Link>
                   <Link 
                     href="/yeida-maps" 
-                    onClick={() => {setIsMobileMenuOpen(false); setIsMapOpen(false);}} 
+                    onClick={() => { setIsMapOpen(false);}} 
                     className="block text-gray-600 hover:text-blue-600 py-3 px-2 cursor-pointer touch-manipulation"
                   >
                     Yeida Maps
                   </Link>
                   <Link 
                     href="/jaypee-sports-city" 
-                    onClick={() => {setIsMobileMenuOpen(false); setIsMapOpen(false);}} 
+                    onClick={() => { setIsMapOpen(false);}} 
                     className="block text-gray-600 hover:text-blue-600 py-3 px-2 cursor-pointer touch-manipulation"
                   >
                     Jaypee Sports City
@@ -140,7 +140,7 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-gray-800 hover:text-blue-600 transition-colors">
+            <Link href="/contact"  className="block text-gray-800 hover:text-blue-600 transition-colors">
               Contact Us
             </Link>
             <Link href="/construction" onClick={() => setIsMobileMenuOpen(false)} className="block text-gray-800 hover:text-blue-600 transition-colors">

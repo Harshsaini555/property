@@ -41,7 +41,7 @@ const Agents = () => {
     },
     {
       id: "dinesh",
-      name: "Mr. Dinesh Khtana",
+      name: "Mr. Dinesh Khatana",
       designation: "Marketing Executive",
       image: "/Dinesh.jpeg",
     },
