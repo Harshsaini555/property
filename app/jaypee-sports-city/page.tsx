@@ -3,6 +3,7 @@ import Footer from "@/components/landing/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import StickyBannerDemo from "@/components/landing/sticky";
 import MapsContent from "@/components/maps/MapsContent";
+import Head from "next/head";
 const MapsContentAny = MapsContent as any;
 
 const cards = [
@@ -74,12 +75,27 @@ const cards = [
 export default function MapsPage() {
 
   return (
-    <div className="min-h-screen bg-white">
-      <StickyBannerDemo />
-      <Header />
-      <MapsContentAny cards={cards} heading={"Jaypee Sports City"}/>
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <>
+      <Head>
+        <title>Edition Realty | Luxury Properties in Gurgaon</title>
+        <meta
+          name="description"
+          content="Explore luxury apartments, villas, and commercial properties in Gurgaon with Edition Realty. Verified listings and trusted agents."
+        />
+        <meta
+          name="keywords"
+          content="real estate gurgaon, edition realty, apartments, villas, properties"
+        />
+        {/* ✅ Canonical tag to tell Google this is the main version */}
+        <link rel="canonical" href="https://www.editionrealty.in/jaypee-sports-city" />
+      </Head>
+      <div className="min-h-screen bg-white">
+        <StickyBannerDemo />
+        <Header />
+        <MapsContentAny cards={cards} heading={"Jaypee Sports City"}/>
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </>
   );
 }

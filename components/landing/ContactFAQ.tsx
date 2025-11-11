@@ -33,6 +33,13 @@ const ContactForm = () => {
       console.error(err);
       setStatus("❌ Something went wrong.");
     }
+
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
