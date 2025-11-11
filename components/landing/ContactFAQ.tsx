@@ -16,23 +16,23 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // setStatus("Sending...");
+    setStatus("Sending...");
 
-    // try {
-    //   const res = await fetch("http://localhost:5000/api/contact", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(formData),
-    //   });
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    //   const data = await res.json();
+      const data = await res.json();
 
-    //   if (data.success) setStatus("✅ Message sent successfully!");
-    //   else setStatus("❌ Failed to send message.");
-    // } catch (err) {
-    //   console.error(err);
-    //   setStatus("❌ Something went wrong.");
-    // }
+      if (data.success) setStatus("✅ Message sent successfully!");
+      else setStatus("❌ Failed to send message.");
+    } catch (err) {
+      console.error(err);
+      setStatus("❌ Something went wrong.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
