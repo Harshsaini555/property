@@ -22,7 +22,7 @@ const AgentCard = ({ agent, delay }: any) => {
         
         <Link
           href={`/about/agents-info?agent=${agent.id}`}
-          className="inline-block bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
+          className="inline-block bg-[#0F828C] text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
         >
           Know More
         </Link>

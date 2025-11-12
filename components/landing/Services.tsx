@@ -71,7 +71,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Our <span className="text-red-500">Property</span> Services</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Our <span className="text-[#0F828C]">Property</span> Services</h2>
           <p className="text-[14px] md:text-[1rem] text-gray-600 max-w-2xl mx-auto">
             Comprehensive real estate solutions tailored to your needs
           </p>

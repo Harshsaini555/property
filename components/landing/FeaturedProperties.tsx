@@ -58,12 +58,12 @@ const FeaturedProperties = () => {
 
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#f2f7f8]">
       <div className="container mx-auto px-4">
         <div
           className="text-center mb-16"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-[#ED3F27] mb-4"><span className="text-gray-900">Featured</span> Properties</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-[#0F828C] mb-4"><span className="text-gray-900">Featured</span> Properties</h2>
           <p className="text-[14px] md:text-[1rem] text-gray-600">Discover our premium property collection</p>
         </div>
 

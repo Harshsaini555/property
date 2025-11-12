@@ -54,7 +54,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-white rounded-2xl p-8 shadow-lg"
+      className="bg-[#a9d9de] rounded-2xl p-8 shadow-lg"
     >
       <h3 className="text-2xl font-bold text-gray-900 mb-6">Request a Quote</h3>
       <form onSubmit={handleSubmit} className="space-y-6 text-[12px] md:text-[1rem]">
@@ -192,7 +192,7 @@ const FAQ = () => {
 
 const ContactFAQ = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#f6fbfc]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

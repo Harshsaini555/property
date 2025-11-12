@@ -45,7 +45,7 @@ const ContactContent = () => {
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">Get In Touch</h1>
+          <h1 className="text-2xl md:text-4xl font-bold text-[#0F828C] mb-4">Get In Touch</h1>
           <p className="text-14px md:text-[1rem] text-slate-600 max-w-2xl mx-auto">
             Ready to find your dream property? Our expert team is here to help you every step of the way.
           </p>
@@ -141,7 +141,7 @@ const ContactContent = () => {
           <div className="text-center mb-8">
             <button
               onClick={() => setShowForm(!showForm)}
-              className="inline-flex items-center space-x-3 bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center space-x-3 bg-[#0F828C] text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl"
             >
               <span>Book Your Appointment</span>
               <ChevronDown className={`w-5 h-5 transition-transform ${showForm ? 'rotate-180' : ''}`} />

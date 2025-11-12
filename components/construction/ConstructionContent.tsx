@@ -77,7 +77,7 @@ const ConstructionCalculator = () => {
         <div className="flex items-end">
           <button
             onClick={calculateValues}
-            className="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all"
+            className="w-full bg-[#0F828C] text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all"
           >
             Calculate
           </button>
@@ -149,7 +149,7 @@ const ConstructionContent = () => {
             <div className="space-y-6" >
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight" style={{fontFamily: 'Caveat'}}>
                 Building Dreams into{" "}
-                <span className="text-transparent bg-clip-text bg-red-500">
+                <span className="text-transparent bg-clip-text bg-[#0F828C]">
                   Reality
                 </span>
               </h1>
@@ -161,15 +161,15 @@ const ConstructionContent = () => {
              </p>
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500">25+</div>
+                  <div className="text-3xl font-bold text-[#0F828C]">25+</div>
                   <div className="text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500">500+</div>
+                  <div className="text-3xl font-bold text-[#0F828C]">500+</div>
                   <div className="text-gray-600">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500">100%</div>
+                  <div className="text-3xl font-bold text-[#0F828C]">100%</div>
                   <div className="text-gray-600">Client Satisfaction</div>
                 </div>
               </div>
