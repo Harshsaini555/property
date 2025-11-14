@@ -77,17 +77,17 @@ export default function MapsPage() {
   return (
     <>
       <Head>
-        <title>Edition Realty | Luxury Properties in Gurgaon</title>
+        <title>Layout Plan of Jaypee Sports City | Edition Realty</title>
         <meta
           name="description"
-          content="Explore luxury apartments, villas, and commercial properties in Gurgaon with Edition Realty. Verified listings and trusted agents."
+          content="Explore luxury apartments, villas, and commercial properties in jaypee sports city with Edition Realty. Verified listings and trusted agents."
         />
         <meta
           name="keywords"
-          content="real estate gurgaon, edition realty, apartments, villas, properties"
+          content="jaypee sports city,maps,map of jaypee, jaypee sports city layout, jaypee sports city master plan"
         />
         {/* ✅ Canonical tag to tell Google this is the main version */}
-        <link rel="canonical" href="https://www.editionrealty.in/jaypee-sports-city" />
+        <link rel="canonical" href="https://editionrealty.in/jaypee-sports-city" />
       </Head>
       <div className="min-h-screen bg-white">
         <StickyBannerDemo />

@@ -15,11 +15,6 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  title: "Editionrealty - Premium Real Estate Services",
-  description: "Premium real estate services with 25 years of undefeated success. Find your dream home with trust and excellence.",
-  keywords: "real estate,editionrealty,properties,flats,plots, property dealing, homes, premium properties",
-};
 
 export default function RootLayout({
   children,
@@ -34,6 +29,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body
         className={`${poppins.variable} ${montserrat.variable} antialiased font-poppins`}

@@ -308,17 +308,17 @@ export default function MapsPage() {
   return (
     <>
       <Head>
-        <title>Edition Realty | Luxury Properties in Gurgaon</title>
+        <title>Layout Plan of Yeida | Edition Realty</title>
         <meta
           name="description"
-          content="Explore luxury apartments, villas, and commercial properties in Gurgaon with Edition Realty. Verified listings and trusted agents."
+          content="Explore luxury apartments, villas, and commercial properties in yeida with Edition Realty. Verified listings and trusted agents."
         />
         <meta
           name="keywords"
-          content="real estate gurgaon, edition realty, apartments, villas, properties"
+          content="yeida,maps,map of yeida, yeida layout, yeida master plan"
         />
         {/* ✅ Canonical tag to tell Google this is the main version */}
-        <link rel="canonical" href="https://www.editionrealty.in/yeida-maps" />
+        <link rel="canonical" href="https://editionrealty.in/yeida-maps" />
       </Head>
       <div className="min-h-screen bg-white">
         <StickyBannerDemo />

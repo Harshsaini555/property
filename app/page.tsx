@@ -27,7 +27,7 @@ export default function Home() {
           content="real estate gurgaon, edition realty, apartments, villas, properties"
         />
         {/* ✅ Canonical tag to tell Google this is the main version */}
-        <link rel="canonical" href="https://www.editionrealty.in/" />
+        <link rel="canonical" href="https://editionrealty.in/" />
       </Head>
 
       {/* 🏠 Main Content */}

@@ -9,17 +9,17 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Edition Realty | Luxury Properties in Gurgaon</title>
+        <title>Contact Us | Edition Realty</title>
         <meta
           name="description"
           content="Explore luxury apartments, villas, and commercial properties in Gurgaon with Edition Realty. Verified listings and trusted agents."
         />
         <meta
           name="keywords"
-          content="real estate gurgaon, edition realty, apartments, villas, properties"
+          content="real estate gurgaon, edition realty, apartments, villas, properties, contact us"
         />
         {/* ✅ Canonical tag to tell Google this is the main version */}
-        <link rel="canonical" href="https://www.editionrealty.in/contact" />
+        <link rel="canonical" href="https://editionrealty.in/contact" />
       </Head>
       <div className="min-h-screen bg-white">
         <StickyBannerDemo />
