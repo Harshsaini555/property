@@ -345,6 +345,17 @@ const cards = [
 
 ];
 
+export const metadata = {
+  title: "Layout Plan of Greater Noida | Edition Realty",
+  description:
+    "Explore luxury apartments, villas, and commercial properties in jaypee sports city with Edition Realty. Verified listings and trusted agents.",
+  keywords:
+    "greater noida,maps,map of greater noida, greater noida layout, greater noida master plan",
+  alternates: {
+    canonical: "https://editionrealty.in/greater-noida-maps" ,
+  },
+};
+
 export default function MapsPage() {
 
   return (

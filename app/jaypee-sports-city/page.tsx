@@ -3,7 +3,6 @@ import Footer from "@/components/landing/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import StickyBannerDemo from "@/components/landing/sticky";
 import MapsContent from "@/components/maps/MapsContent";
-import Head from "next/head";
 const MapsContentAny = MapsContent as any;
 
 const cards = [
@@ -72,23 +71,21 @@ const cards = [
   },
 ];
 
+export const metadata = {
+  title: "Layout Plan of Jaypee Sports City | Edition Realty",
+  description:
+    "Explore luxury apartments, villas, and commercial properties in jaypee sports city with Edition Realty. Verified listings and trusted agents.",
+  keywords:
+    "jaypee sports city,maps,map of jaypee, jaypee sports city layout, jaypee sports city master plan",
+  alternates: {
+    canonical: "https://editionrealty.in/jaypee-sports-city" ,
+  },
+};
+
 export default function MapsPage() {
 
   return (
     <>
-      <Head>
-        <title>Layout Plan of Jaypee Sports City | Edition Realty</title>
-        <meta
-          name="description"
-          content="Explore luxury apartments, villas, and commercial properties in jaypee sports city with Edition Realty. Verified listings and trusted agents."
-        />
-        <meta
-          name="keywords"
-          content="jaypee sports city,maps,map of jaypee, jaypee sports city layout, jaypee sports city master plan"
-        />
-        {/* ✅ Canonical tag to tell Google this is the main version */}
-        <link rel="canonical" href="https://editionrealty.in/jaypee-sports-city" />
-      </Head>
       <div className="min-h-screen bg-white">
         <StickyBannerDemo />
         <Header />
