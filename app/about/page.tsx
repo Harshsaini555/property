@@ -10,6 +10,10 @@ export const metadata = {
     "Explore luxury apartments, villas, and commercial properties in jaypee sports city with Edition Realty. Verified listings and trusted agents.",
   keywords:
     "about us, edition realty, real estate noida, apartments, villas, properties",
+    robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: "https://editionrealty.in/about" ,
   },
