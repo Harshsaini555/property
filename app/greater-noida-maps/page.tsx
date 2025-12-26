@@ -22,7 +22,7 @@ const cards = [
   },
   {
     description: "Lord Himesh",
-    title: "Aap Ka Suroor",
+    title: "Layout Plan of Alpha-2",
     src: "/greater-noida/3.jpg",
     ctaText: "View",
     index:4
@@ -92,7 +92,7 @@ const cards = [
   },
   {
     description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
+    title: "Layout Plan of Omicron-1",
     src: "/greater-noida/13.jpg",
     ctaText: "View",
     index:14
@@ -162,7 +162,7 @@ const cards = [
   },
   {
     description: "Lord Himesh",
-    title: "Aap Ka Suroor",
+    title: "Layout Plan of Institutional Area Phase-2",
     src: "/greater-noida/23.jpg",
     ctaText: "View",
     index:24
@@ -269,7 +269,7 @@ const cards = [
     description: "Metallica",
     title: "Layout Plan of Sector-XU3",
     src: "/greater-noida/38.jpg",
-    ctaText: "View",
+    ctaText: "View",    
     index:39
   },
   {
@@ -295,7 +295,7 @@ const cards = [
   },
   {
     description: "Lord Himesh",
-    title: "Aap Ka Suroor",
+    title: "Master Plan of Green Belt",
     src: "/greater-noida/42.jpg",
     ctaText: "View",
     index:43
